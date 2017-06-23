@@ -34,9 +34,7 @@ public class EhcacheFactory extends BaseCacheFactory {
 	private static CacheManager getCacheManager() {
 		if (cacheManager == null) {
 			synchronized (EhcacheFactory.class) {
-				if (cacheManager == null) {
-					cacheManager = CacheManager.create();
-				}
+				cacheManager = CacheManager.create();
 			}
 		}
 		return cacheManager;

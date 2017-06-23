@@ -9,7 +9,7 @@ package com.luhy.guns.common.constant.state;
 public enum BizLogType {
 
     ALL(0, null),//全部日志
-    BUSSINESS(1, "业务日志"),
+    BUSINESS(1, "业务日志"),
     EXCEPTION(2, "异常日志");
 
     Integer val;

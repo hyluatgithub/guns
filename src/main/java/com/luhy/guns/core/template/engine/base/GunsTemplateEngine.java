@@ -55,11 +55,12 @@ public abstract class GunsTemplateEngine extends AbstractTemplateEngine {
         configTemplate(pageTemplate);
         File file = new File(filePath);
         File parentFile = file.getParentFile();
-        if(!parentFile.exists()){
-            parentFile.mkdirs();
-        }
         try {
-            pageTemplate.renderTo(new FileOutputStream(file));
+            if (!parentFile.exists()) {
+                if (parentFile.mkdirs()) {
+                    pageTemplate.renderTo(new FileOutputStream(file));
+                }
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
