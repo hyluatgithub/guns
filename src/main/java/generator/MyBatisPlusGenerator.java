@@ -34,7 +34,7 @@ public class MyBatisPlusGenerator {
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
-        gc.setAuthor("stylefeng");
+        gc.setAuthor("luhy");
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -62,9 +62,9 @@ public class MyBatisPlusGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent(null);
-        pc.setEntity("com.stylefeng.guns.common.persistence.model");
-        pc.setMapper("com.stylefeng.guns.common.persistence.dao");
-        pc.setXml("com.stylefeng.guns.common.persistence.dao.mapping");
+        pc.setEntity("com.luhy.guns.common.persistence.model");
+        pc.setMapper("com.luhy.guns.common.persistence.dao");
+        pc.setXml("com.luhy.guns.common.persistence.dao.mapping");
         pc.setService("TTT");       //本项目没用，生成之后删掉
         pc.setServiceImpl("TTT");   //本项目没用，生成之后删掉
         pc.setController("TTT");    //本项目没用，生成之后删掉

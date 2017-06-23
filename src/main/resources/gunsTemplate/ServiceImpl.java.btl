@@ -7,7 +7,7 @@ import ${import};
 /**
  * ${context.bizChName}Dao
  *
- * @author fengshuonan
+ * @author luhy
  * @Date ${tool.currentTime()}
  */
 @Service

@@ -208,9 +208,9 @@ CREATE TABLE `operation_log` (
 -- ----------------------------
 -- Records of operation_log
 -- ----------------------------
-INSERT INTO `operation_log` VALUES ('480', '业务日志', '清空业务日志', '1', 'com.stylefeng.guns.modular.system.controller.LogController', 'delLog', '2017-06-03 23:04:22', '成功', '主键id=null');
-INSERT INTO `operation_log` VALUES ('481', '业务日志', '清空登录日志', '1', 'com.stylefeng.guns.modular.system.controller.LoginLogController', 'delLog', '2017-06-03 23:04:25', '成功', '主键id=null');
-INSERT INTO `operation_log` VALUES ('482', '业务日志', '修改菜单', '1', 'com.stylefeng.guns.modular.system.controller.MenuController', 'edit', '2017-06-04 10:22:58', '成功', '菜单名称=分配角色跳转;;;字段名称:url地址,旧值:/role/role_assign,新值:/mgr/role_assign');
+INSERT INTO `operation_log` VALUES ('480', '业务日志', '清空业务日志', '1', 'LogController', 'delLog', '2017-06-03 23:04:22', '成功', '主键id=null');
+INSERT INTO `operation_log` VALUES ('481', '业务日志', '清空登录日志', '1', 'LoginLogController', 'delLog', '2017-06-03 23:04:25', '成功', '主键id=null');
+INSERT INTO `operation_log` VALUES ('482', '业务日志', '修改菜单', '1', 'MenuController', 'edit', '2017-06-04 10:22:58', '成功', '菜单名称=分配角色跳转;;;字段名称:url地址,旧值:/role/role_assign,新值:/mgr/role_assign');
 
 -- ----------------------------
 -- Table structure for relation

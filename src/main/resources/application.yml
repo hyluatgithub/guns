@@ -7,13 +7,13 @@ guns:
   swagger-open: true #是否开启swagger (true/false)
   kaptcha-open: false #是否开启登录时验证码 (true/false)
   session-open: false #是否开启session验证 (true/false)
-  #file-upload-path: d:/tmp  #文件上传目录(不配置的话为java.io.tmpdir目录)
+  file-upload-path: d:/tmp  #文件上传目录(不配置的话为java.io.tmpdir目录)
   session-invalidate-time: 1800 #session失效时间 单位：秒
   session-validation-interval: 900 #多久检测一次失效的session 单位：秒
 
 ###################  项目启动端口  ###################
 server:
-  port: 80
+  port: 8088
 
 ###################  beetl配置  ###################
 beetl:
@@ -37,8 +37,8 @@ spring:
 
 ###################  mybatis-plus配置  ###################
 mybatis-plus:
-  mapper-locations: classpath*:com/stylefeng/guns/**/mapping/*.xml
-  typeAliasesPackage: com.stylefeng.guns.common.persistence.model
+  mapper-locations: classpath*:com/luhy/guns/**/mapping/*.xml
+  typeAliasesPackage: com.luhy.guns.common.persistence.model
   global-config:
     id-type: 1  #1:数据库ID自增   2:用户输入id   3:全局唯一id(IdWorker)   4:全局唯一ID(uuid)
     db-column-underline: false
@@ -59,6 +59,25 @@ spring:
   profiles: dev
   datasource:
       url: jdbc:mysql://115.159.218.168:3306/guns?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: root
+      filters: log4j,wall,mergeStat
+
+logging:
+  level: debug
+  file: logs/guns.log
+
+---
+
+---
+
+##########################################################
+###################  开发环境的profile  ###################
+##########################################################
+spring:
+  profiles: dev-local
+  datasource:
+      url: jdbc:mysql://127.0.0.1:3306/guns?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
       username: root
       password: root
       filters: log4j,wall,mergeStat
