@@ -18,8 +18,9 @@ public class ControllerConfig {
     private List<String> imports;//所引入的包
 
     public void init() {
+        //此处配置默认的包引用
         ArrayList<String> imports = new ArrayList<>();
-        imports.add("BaseController");
+        imports.add("com.luhy.guns.common.controller.BaseController");
         imports.add("org.springframework.stereotype.Controller");
         imports.add("org.springframework.web.bind.annotation.RequestMapping");
         imports.add("org.springframework.web.bind.annotation.ResponseBody");
